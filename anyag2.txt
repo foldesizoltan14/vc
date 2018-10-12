@@ -1,0 +1,30 @@
+processz=folyamat=taszk
+
+PID - Process Identificator
+
+init(systemd)- ebből származik az összes felhasználói folyamat
+  |--------------
+gnome-shell	|
+		 |
+		bash
+
+
+PPID - Parent PID
+Orphan process - árva 
+
+"folyamat" & - háttérben futtatás (megjelent szám a PID)
+bg - háttérben futtatás
+fg - előtérben -||-
+ps - processek (-e  összes folyamat 
+		-f részletes lista
+		-u adott felhasználó folyamatok
+		ww tördelés
+		-ux)
+
+ps -aux
+pstree 
+top
+htop
+kill - signal küldés (kill -9 )
+ alapesetben term signal
+
