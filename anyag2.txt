@@ -27,4 +27,11 @@ top
 htop
 kill - signal küldés (kill -9 )
  alapesetben term signal
+ 
+ Folyamatok prioritása
+ -alap prioritás
+ -ütemezési prioritás
+ -"nice" prioritás -20 -19
+ 		   default:0
+		   
 
