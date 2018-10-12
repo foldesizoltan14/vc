@@ -34,4 +34,6 @@ kill - signal küldés (kill -9 )
  -"nice" prioritás -20 -19
  		   default:0
 		   
+		   nice -n 10 top
+		   
 
