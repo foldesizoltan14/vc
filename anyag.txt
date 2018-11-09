@@ -1,39 +1,37 @@
- 				
-Felhasználói "kör"
+﻿Cat b.txt |colrm 2 4   - 2. tól negyedikig töröl
+>  átadás
+cat /etc/passwd | grep hallgato | cut -d: -f3    hallgato user id 
+cat /etc/passwd | grep hallgato | cut -c   1-10
+grep „/bin/bash/ etc/passwd
+grep -c „/bin/bash/ etc/passwd    hány sor
+grep -i "/BIN/bash" /etc/passwd   kis betű nagybetű nem számít 
+cat /etc/passwd > pw.txt
+grep "^hallgato" pw.txt a.txt
+grep -l "^hallgato" pw.txt a.txt  csak azt a fájlt irja ki ami tartalmazza 
+grep -v "^hallgato" /etc/passwd   nem hallgato
+grep -v "^hallgato" /etc/passwd | wc     ennyi sor van ilyen, második a szo, hánykarakter
+grep -v "^hallgato" /etc/passwd | wc -l   sorok száma 
+grep -v "^hallgato" /etc/passwd | wc -c  karakterek száma
+grep -v "^hallgato" /etc/passwd | wc -w   szavak száma 
+grep -w  teljes szavakra vonatkozik
 
-u - user,owner/felhasználó,tulajdonos					
-g - group/csoport
-o - others/mindenki más 
-a - all
-
-Jogosultságok
-r - read/olvasás (4)		
-w - write/írás (2)			minden jogosultság:4+2+1=7
-x - execution/futattás (1) 
-
-rwxr-xr-x     7 5 5
- 
-rwxr-user jogosultságai
-xr- group -||-
-r- others -||-
-
-alapértelmezett jogosultság: 644
-
-
-cat -kiíratás
-tac -visszafele kiíratás
-head- első 10 sor
-tail- utolsó 10 sor
-ln - hard link
-ln -s   -soft link
-chmod 744 fájlnév  -jogosultság adás
-chmod u+r -||-
-chown -átruházás
-
-parancs mód
--utolsósor mód 
-vi vim
-
--Beviteli mód
-
+.  tetszőleges egy darab karakter pl M.m --> Mam M2m Mem Mom stb..
+[]  felsorolás pls M[aeiou]m --> Mam Mem Mim Mom Mum
+M[a-z]m
+[a-z] --> [:lower:]
+[A-Z] --> [:upper:]
+[a-z A-Z] --> [:alpha:]
+[0-9] --> [:digit:]
+negálás [^mint]
+grep "^A"  --> A-val kezdődik a sor
+$ a vége
+Ismétlődések: 
+M.?m   pont helyén lehet semmi vagy egy karakter
+Mo*m  ---> Mm Mom Mooooom  it nem muszáj az o 
+Mo+m  legalább egyszer Mom Mooom Mooom
+[A-Z]{3} - [:digit:]{3}   rendszám
+pinkód [0-9]{4,8}    legalább 4 max 8 
+jelszó (legalább 6 )  .{6,}
+fizetés (1 milla alatt) [:digit:]{,6} Ft
+RegexOne
 
