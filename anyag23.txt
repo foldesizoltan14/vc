@@ -1,0 +1,50 @@
+grep 
+egrep
+vim
+grep -E
+grep "alm\{3\}a" input1.txt
+paste input1.txt input2.txt input3.txt
+rev
+[[:space:]] 
+[[:blank:]]
+ls -l| sort -k  5     első számot nézi a méretnél
+ls -l| sort -k5 -k9
+ls -l| sort -r -k9  csökkenő sorrend
+cat input1.txt | sort -u   kiveszi az ismétlődőket
+cat input1.txt | sort -u -k1    rendezi is 
+cat input1.txt | sort -u -k1 -r   fordítva
+cat input1.txt | sort -o output.txt  
+cat output.txt | uniq   ami többször van azt nem írja ki
+cat output.txt | uniq -d   csak azt írja ki ami többször van
+cat output.txt | uniq -c  megszámolja h hányszor szerepelnek 
+cat output.txt | tr " " "-"   szóközt - re cseréli
+ cat /etc/passwd | tr ":" "#"
+cat /etc/passwd | tr -c ":" "#" mindent kicserél ami nem kettőspont
+cat /etc/passwd | tr -d ":"  kitörl
+cat gsoc.csv | sed -s "s/"2014[[:space:]]//"
+who   ip cim az utso
+id
+w
+cat /etc/passwd| grep "^h"    h val kezdődő
+cat /etc/passwd| grep "^h" | grep bash | wc -l 
+ cat /etc/passwd|  cut -d: -f4 | egrep "^[0-9]{1,2}"
+ cat /etc/passwd|  cut -d: -f4 | grep "^[0-9]\{1,2\}"
+ cat /etc/passwd|  cut -d: -f1,4 | egrep ":[0-9]{1,2}"
+cat /etc/passwd|  cut -d: -f1,4 | egrep ":[0-9]{1,2}"| sort -k2n -t:
+visa kártya szűrés (16 karakter 4 el kezdődik)  grep "4[[:digit:]]\{15\" visa.txt
+cat gsoc.csv | wc -l
+grep "for" gsoc.csv | wc -l
+ cat in.txt | sed -s "s#google/##"   kicseréli a google t semmire
+grep -v "for" gsoc-csv | wc -l   amiben nincs for
+tail.5 gsoc.csv | wc -c 
+ls -la |sort -k5n | tail -n 10 legnagyobb fájlok sorban első 10
+grep "/bin/bash" /etc/passwd | sort -k1 -r 
+ls -l |cut -d ' ' -f1| grep "x" | wc -l
+who | tr -s ' ' | cut -d ' ' -f1,6| sort -k 1
+ps -aux  összes felhasználó által futtatott összes folyamat 
+ps -aux | sort | tr -s ' ' | cut -d ' ' -f1 | uniq -d egynél több folyamatot futtató felhasználók ű
+ps -aux | sort | tr -s ' ' | cut -d ' ' -f1 | uniq -u    csak egyet futtatnak 
+grep -v '/bin/bash" /etc/passwd | sort -r 
+ls -l | tr - s ' ' | cut -d ' ' -f1 | grep "r" | wc -l
+who | sort | tr -s ' ' | cut -d ' ' -f1,5
+
